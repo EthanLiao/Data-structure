@@ -1,0 +1,37 @@
+----------------------------------------
+Moss - A collection of utilities and widgets
+Copyright (C) 2006 Wyatt Olson
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+----------------------------------------
+
+Moss is a set of functions and widgets I created for use 
+in many of my projects.  I compiled it into a library mainly for my own use,
+but thought to release it in case anyone else finds it useful.
+
+The code which I created in Moss is released under the GPL, dual licensed under 
+version 2 and 3.  If you have a particular need for a component under a different 
+license, please contact me and we can discuss options.  In the past, I have 
+allowed dual licensing of some of these components for inclusion in commercial projects.
+
+Note that this code is development quality, and may change without notice.
+
+I named the project Moss because a) I couldn't think of a better name that
+reflects what it does, and b) because moss grows in caves (and my personal web site 
+is called The Cave).  It also is a recursive acronym: MOSS is Open Source 
+Software.  Hey, everyone needs a good recursive acronym at some point in life!
+
+Wyatt Olson
+wyatt.olson@gmail.com

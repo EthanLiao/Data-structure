@@ -1,0 +1,89 @@
+1.3.1.0 (December 6 2007)
+-Improved the performance of DateFunctions.isSameDay() considerably, by doing some pre-checking on the input dates.
+-Added SortedArrayList, a list implementation which keeps all elements sorted.  Tries to improve on the default implementation of ArrayList by using binary search when possible, instead of O(n) search.
+
+1.3.0.0
+-Added Collection wrapers which add a change event and associated listener classes to collections
+-Added simple Preferences framework
+-Added optional compression (GZip format) to encrypted streams
+-Numerous tweaks and changes, as Buddi 3.0 continues to grow and mature
+
+1.2.0.1
+-Bug fix to ExifTool which resulted in a null being passed back if there was only one image to load.
+
+1.2.0.0 (September 5 2007)
+-More major refactoring.  Sorry for the inconvenience to anyone who is using Moss currently!
+-Minor fix to MossFrame which allows automatic (and intelligent) exiting of the application based on open windows, OS, etc.
+
+1.1.1.0
+-Improved LanguageEditor
+
+1.1.0.0 (August 12 2007)
+-Added new packages, including i18n language helpers (Translator and Language Editor)
+-Improved JSearchField to extend JHintTextField instead of JPanel, and incorporate the X button and mouse listener in its own class, instead of relying on a JLabel.  On the Mac, I also integrated Quaqua's new Search Field property to give this the rounded edges which Mac search fields have.
+-Refactored packages for cleaner layout.
+-Reworked Window framework, giving more document related functionality
+-Added Document framework, integrated with parts of the Window framework
+-Added duplicate window checks to AbstractFrame.  This lets you decide if a new request for a window will result in a new window opening, or if it will try to focus on an existing window first.
+
+1.0.0.0 (Never publicly released)
+-Split up source into separate packages - my own original code, and code which I have modified from other sources.  This is in preparation for potential license changes (GPL3, possibly dual licensed as proprietary for inclusion into my own non OSS projects).
+-Added CompositeSortedList
+-Added Application and ApplicationAdapter, as wrappers for the Apple created versions.  This allows people writing cross platform software to check if they are running on a Mac before trying to open the class, thus resulting in a class cast exception.
+-Added Menu framework, to allow better manipulation of menus.
+
+0.8.0.0 (Never publicly released)
+-Changed interface for JTextComponentHint to use Object instead of String for value.  This should make it work better with JHintComboBox.
+-Added DefaultSortedSetComboBoxModel, as the default model to JHintComboBox.  This only allows entering unique objects, and automatically sorts them as they are entered.
+-Fixed some bugs with JDecimalField (most of which involve the negative sign and usability)
+
+0.7.0.0 (Never publicly released)
+-Fixed bug in JDecimalField that would allow a negative number to be set, even if the allowNegative flag was set to false.
+-Added PrintStream support to Log.  This allows us to output logs to either stderr (default), or a specified print stream (such as going to a file).  This can make debugging a program run on a third party's machine much easier, as we can see more of the logs.
+-Add copy / paste support for JDecimalField
+
+0.6.1.0 (1 June 2007)
+-Usability enhancements to JDecimalField
+
+0.6.0.0 (Never publicly released)
+-Rewrote ParseCommands to be much cleaner and more powerful (can return non-flagged arguments, can specify whether flags are required or not, etc).
+
+0.5.9 (Never publicly released)
+-Expansion of abstractwindows package to include AbstractPanel
+-Addition of setPriority and getPriority for SwingWorker
+-Added new constructor to JScrollingComboBox
+-Replaced JCurrencyField with a new version, to allow for better UI design and properly handled negative numbers
+-Added JStatusDialog for showing short messages for a time (such as "Loading..." when long tasks are working).
+-Added new SwingWorker (backported from Java 1.6) from SwingLabs (licensed under LGPL)
+-Tweaked absteact window framework
+
+0.5.8 (31 March 2007)
+-Fixed bug where if a default button was set for the frame and you were editing a JHint[AutoComplete]TextField, if you hit enter the button would activate before saving the value of the text field.
+-Added openWindow(Dimension, Point) support for StandardContainer, to let you open the window with specified location and dimensions.
+
+0.5.7 (Never publicly released)
+-Added getBinaryTagFromFiles to ExifToolWrapper - load a binary tag from multiple files at once, to save time on ExifTool start-up overhead.
+
+0.5.6 (Never publicly released)
+-Fixed bug in FileFunctions.readTextStream) which would include extra characters at the end of the text stream
+-Many modifications and additions to ExifToolWrapper and other Image classes
+-Addition of JProgressDialog - a dialog with a progress bar
+
+0.5.5 (7 January 2007)
+-Added ExifToolWrapper to org.homeunix.thecave.moss.images package, and moved ImageFunctions to the same new package.  ExifToolWrapper is a wrapper class for ExifTool (http://owl.phy.queensu.ca/~phil/exiftool/) which allows you to access and edit IPTC and EXIF image metadata from Java.  Note that you have to download ExifTool separately; I do not supply it with Moss.  When you create the ExifToolWrapper instance, you need to specify the location of the 'exiftool' command line utility.
+
+0.5.4 (31 December 2006)
+-Added some new classes and methods to support Image Tagger application.  This includes JTriStateCheckBox, ImageFunctions, abstract Frame and Dialog frameworks, etc.
+
+0.5.3 (30 October 2006)
+-Fixed bug which prevented loading classes from .jar on Windows
+-Added new method to allow loading resources from arbitrary .jars
+
+0.5.2 (15 October 2006)
+-Added Javadoc API; in the process, I cleaned up the comments on some classes.
+
+0.5.1 (13 October 2006)
+-Fixed problem with JPAsswordInputDialog where it gave an error message if you hit cancel without a confirm field shown.
+
+0.5.0 (10 October 2006)
+-Initial release of Moss.  Includes most of the widgets used in Buddi, as well as some data structures I used in previous projects.
